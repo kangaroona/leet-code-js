@@ -6,7 +6,7 @@
 
 // @lc code=start
 function myAtoi(s: string): number {
-  let arr: any[] = s
+  const arr: (string | undefined)[] = s
     .trim()
     .split(" ")
     .filter((item) => item)
@@ -14,7 +14,7 @@ function myAtoi(s: string): number {
       if (!Number.isNaN(parseInt(item, 10))) return item;
     });
   console.log(arr);
-  const rs = parseInt(arr[0]) || 0;
+  const rs = parseInt(arr[0]!) || 0;
   const res =
     rs > 2147483647 ? 2147483647 : rs < -2147483648 ? -2147483648 : rs;
   return res;

@@ -12,7 +12,7 @@ const left_bound = function (nums: number[], target: number): number {
   let left = 0,
     right = nums.length - 1;
   while (left <= right) {
-    var mid = left + Math.floor((right - left) / 2);
+    const mid = left + Math.floor((right - left) / 2);
     console.log(mid);
     if (nums[mid] < target) {
       left = mid + 1;
@@ -35,7 +35,7 @@ const right_bound = function (nums: number[], target: number): number {
   let left = 0,
     right = nums.length - 1;
   while (left <= right) {
-    let mid = left + Math.floor((right - left) / 2);
+    const mid = left + Math.floor((right - left) / 2);
     if (nums[mid] < target) {
       left = mid + 1;
     } else if (nums[mid] > target) {

@@ -6,7 +6,7 @@
 
 // @lc code=start
 function removeElement(nums: number[], val: number): number {
-  let len = nums.length;
+  const len = nums.length;
   let i = 0;
   while (i < len && nums[i] !== undefined) {
     if (nums[i] === val) {

@@ -8,13 +8,13 @@
 //用stack 来解决
 function isValid(s: string): boolean {
   if (s.length % 2 !== 0) return false;
-  const leftArr = ["{", "[", "("];
-  const validMap: any = {
+  const leftArr: string[] = ["{", "[", "("];
+  const validMap: Record<string, string> = {
     "}": "{",
     ")": "(",
     "]": "[",
   };
-  let stack: string[] = [];
+  const stack: string[] = [];
   for (let i = 0; i < s.length; i++) {
     if (leftArr.includes(s[i])) {
       stack.push(s[i]);

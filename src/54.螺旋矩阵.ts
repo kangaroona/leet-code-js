@@ -10,8 +10,9 @@
 //   "↑" = 3,
 // }
 // @lc code=start
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function spiralOrder(matrix: number[][]): number[] {
-  let resArr: number[] = [];
+  const resArr: number[] = [];
   let top: number = 0,
     left: number = 0,
     right: number = matrix[0].length - 1,

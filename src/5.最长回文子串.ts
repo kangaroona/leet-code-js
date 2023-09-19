@@ -13,6 +13,7 @@ function palindrome(s: string, left: number, right: number) {
   return s.substring(left + 1, right);
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function longestPalindromeStr(s: string): string {
   let s1,
     s2,
