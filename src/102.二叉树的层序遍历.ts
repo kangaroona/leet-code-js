@@ -49,4 +49,15 @@ function levelOrder(root: TreeNode | null): number[][] {
   }
   return res;
 }
+class TreeNode1 {
+  val: number;
+  left: TreeNode | null;
+  right: TreeNode | null;
+  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
+  }
+}
+levelOrder(new TreeNode1());
 // @lc code=end
