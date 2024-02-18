@@ -6,7 +6,6 @@
 
 // @lc code=start
 function jump(nums: number[]): number {
-
-};
+  return 0;
+}
 // @lc code=end
-

@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function search(nums: number[], target: number): number {
+export function search(nums: number[], target: number): number {
   return nums.indexOf(target);
 }
 // @lc code=end
