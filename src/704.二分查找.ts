@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-function search(nums: number[], target: number): number {
+export function search(nums: number[], target: number): number {
   let left = 0,
     right: number = nums.length - 1;
   while (left <= right) {
-    let middle = left + Math.floor((right - left) / 2);
+    const middle = left + Math.floor((right - left) / 2);
     // console.log(middle);
     if (nums[middle] < target) {
       //说明要查的在右边
