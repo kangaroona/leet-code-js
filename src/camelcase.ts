@@ -29,6 +29,32 @@ function converKey(obj: any, covertFn: (k: string) => string) {
     return acc;
   }, {});
 }
+// function chunk(arr: any[], size: number): any[][] {
+//   const res: any[] = [];
+//   let count: number = -1;
+//   arr.map((item: any, idx) => {
+//     if (idx % size == 0) {
+//       const curArr = [item];
+//       res.push(curArr);
+//       count++;
+//     } else {
+//       res[count].push(item);
+//     }
+//   });
+//   return res;
+// }
+function chunk(arr: any[], size: number): any[][] {
+  return arr.reduce((acc, cur, curIdx) => {
+    if (curIdx % size == 0) {
+      acc.push([cur]);
+    } else {
+      const curKey: number = Math.floor(curIdx / size);
+      acc[curKey].push(cur);
+    }
+    return acc;
+  }, []);
+}
+console.log(chunk(['a', 'b', 'c', 'd'], 2));
 const camelObj = converKey(inputObject, toCamelCase);
 console.log('camelObj', camelObj);
 console.log('kebe', converKey(camelObj, toSnakeCase));
